@@ -2,9 +2,6 @@ module git.profects.com/profects/server
 
 go 1.13
 
-// Pin go-micro on v1.8.3
-replace github.com/micro/go-micro => github.com/micro/go-micro v1.7.0
-
 // Fix github.com/go-resty/resty unknown revision
 replace github.com/go-resty/resty => gopkg.in/resty.v1 v1.11.0
 
@@ -14,6 +11,9 @@ replace github.com/gogo/protobuf v0.0.0-20190410021324-65acae22fc9 => github.com
 // Fix not enough arguments in call to watch.NewStreamWatcher
 replace k8s.io/client-go => k8s.io/client-go v0.0.0-20190620085101-78d2af792bab
 
+// Pin go-micro on v1.8.3
+replace github.com/micro/go-micro => github.com/micro/go-micro v1.7.0
+
 // Below replaces needed for go-micro v1.7.0
 replace github.com/micro/go-plugins => github.com/micro/go-plugins v1.0.0
 
@@ -21,13 +21,12 @@ replace github.com/census-instrumentation/opencensus-proto v0.1.0-0.201812141439
 
 replace github.com/hashicorp/consul => github.com/hashicorp/consul v1.5.1
 
-// Fix module github.com/go-log/log@latest (v0.1.0) found, but does not contain package github.com/go-log/log/print
-replace github.com/go-log/log => github.com/go-log/log v0.1.1-0.20181211034820-a514cf01a3eb
-
 require (
 	github.com/golang/protobuf v1.3.2
 	github.com/micro/examples v0.2.0
+	github.com/micro/go-micro v1.7.1-0.20190711204633-5157241c88e0
 	github.com/micro/go-plugins v1.1.2-0.20190710094942-bf407858372c
+	github.com/nats-io/nats-server/v2 v2.0.4 // indirect
 	golang.org/x/net v0.0.0-20190912160710-24e19bdeb0f2
 	google.golang.org/grpc v1.23.1
 )
