@@ -32,7 +32,7 @@ func call(i int, c client.Client) {
 
 	// Call service
 	if err := c.Call(ctx, req, rsp); err != nil {
-		log.Println("call err: ", err, rsp)
+		log.Println("call error ", i, ": err: ", err, rsp)
 		return
 	}
 
@@ -47,6 +47,7 @@ func main() {
 		micro.Registry(consul.NewRegistry()),
 		micro.Transport(tp.NewTransport()),
 		micro.Broker(br.NewBroker()),
+		//micro.Client(client.NewClient(client.RequestTimeout(2*time.Second))),
 	)
 	service.Init()
 
@@ -56,6 +57,7 @@ func main() {
 		for i := 0; i < 100; i++ {
 			call(i, service.Client())
 		}
+		log.Print("DONE")
 	}()
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
