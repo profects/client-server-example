@@ -29,3 +29,7 @@ $ go run client/main.go
 2019/09/13 10:52:32 Broker [nats] Connected to nats://127.0.0.1:4222
 2019/09/13 10:52:32 Registry [consul] Registering node: go.micro.client-85cce84b-389e-42eb-8258-ceaf02f27158
 ```
+
+## consul
+
+[Consul with client/server](https://prnt.sc/p5kxt1)
