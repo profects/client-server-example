@@ -4,9 +4,11 @@ This is a microservice example. Run the server first and the client after. Feel 
 
 ## Contents
 
-- main.go - initialises and runs the the server
-- handler - is an example RPC request handler for the Server
-- proto - contains the protobuf defintion for the Server API
+- server/main.go - initialises and runs the the server
+- server/handler - is an example RPC request handler for the Server
+- server/proto - contains the protobuf defintion for the Server API
+
+- client/main.go - initialises and runs the the client
 
 ## Usage
 
@@ -26,3 +28,4 @@ $ go run client/main.go
 2019/09/13 10:52:32 Transport [nats] Listening on _INBOX.oblwlIaiO8eTdxjz6GwlY1
 2019/09/13 10:52:32 Broker [nats] Connected to nats://127.0.0.1:4222
 2019/09/13 10:52:32 Registry [consul] Registering node: go.micro.client-85cce84b-389e-42eb-8258-ceaf02f27158
+```
